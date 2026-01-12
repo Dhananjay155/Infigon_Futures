@@ -5,11 +5,11 @@ import { useParams, useRouter } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Product } from '@/types/product';
-import { fetchProductById } from '@/lib/api';
 import { useFavorites } from '@/hooks/useFavorites';
 import LoadingSkeleton from '@/components/LoadingSkeleton';
 import ErrorState from '@/components/ErrorState';
 import ThemeToggle from '@/components/ThemeToggle';
+import { fetchProduct} from '@/lib/api';
 
 export default function ProductDetailPage() {
   const params = useParams();
@@ -26,7 +26,7 @@ export default function ProductDetailPage() {
     try {
       setLoading(true);
       setError(null);
-      const data = await fetchProductById(id);
+      const data = await fetchProduct(Number(id));
       setProduct(data);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to load product');
