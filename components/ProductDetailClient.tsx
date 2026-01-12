@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Product } from '@/types/product';
-import { fetchProductById } from '@/lib/api';
+import { fetchProduct } from '@/lib/api';
 import { useFavorites } from '@/hooks/useFavorites';
 import ErrorState from '@/components/ErrorState';
 import ThemeToggle from '@/components/ThemeToggle';
@@ -24,7 +24,7 @@ export default function ProductDetailClient({ productId }: ProductDetailClientPr
     try {
       setLoading(true);
       setError(null);
-      const data = await fetchProductById(productId);
+      const data = await fetchProduct(Number(productId));
       setProduct(data);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to load product');
