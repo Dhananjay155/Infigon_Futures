@@ -7,13 +7,13 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Product Explorer',
-  description: 'Browse and explore our product catalog',
+  description: 'Browse and explore products',
 };
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode; 
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
