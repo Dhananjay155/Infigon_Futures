@@ -68,9 +68,9 @@ A modern, responsive product catalog application built with Next.js 14, TypeScri
 
 ## ScreenShot
 
-![Light Mode](./public/Screenshot/LightMode.jpg)
-![Dark Mode](./public/Screenshot/DarkMode.jpg)
-![Product Detail](./public/Screenshot/ProductDetail.jpg)
+![Light Mode](./public/Screenshot/LightMode.png)
+![Dark Mode](./public/Screenshot/DarkMode.png)
+![Product Detail](./public/Screenshot/ProductDetail.png)
 
 ## 🛠️ Tech Stack
 
