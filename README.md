@@ -66,6 +66,12 @@ A modern, responsive product catalog application built with Next.js 14, TypeScri
 ✅ **Error Handling** - Comprehensive error boundaries and states  
 ✅ **localStorage** - Persistent favorites and theme preferences  
 
+## ScreenShot
+
+![Light Mode](/public/screenshots/LightMode.jpg)
+![Dark Mode](/public/screenshots/DarkMode.jpg)
+![Product Detail](/public/screenshots/ProductDetail.jpg)
+
 ## 🛠️ Tech Stack
 
 - **Framework**: [Next.js 14](https://nextjs.org/) (App Router)
