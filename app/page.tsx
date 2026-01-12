@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { fetchProducts, fetchCategories } from '@/lib/api';
 import HomePageClient from '@/components/HomePageClient';
 
