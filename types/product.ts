@@ -16,4 +16,4 @@ export interface ProductFilters {
   category: string;
   showFavoritesOnly: boolean;
   sortBy: 'none' | 'price-asc' | 'price-desc';
-} 
+}
