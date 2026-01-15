@@ -5,9 +5,24 @@ const API_BASE_URL =
 
 export async function fetchProducts(): Promise<Product[]> {
   try {
-    const res = await fetch(`${API_BASE_URL}/products`, { cache: 'no-store' });
-    if (!res.ok) return [];
-    return res.json();
+    console.log('Fetching products from:', `${API_BASE_URL}/products`);
+    const res = await fetch(`${API_BASE_URL}/products`, { 
+      cache: 'no-store',
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    });
+    
+    console.log('Response status:', res.status);
+    
+    if (!res.ok) {
+      console.error('API Error:', res.statusText);
+      return [];
+    }
+    
+    const data = await res.json();
+    console.log('Products fetched:', data.length);
+    return data;
   } catch (err) {
     console.error('fetchProducts error:', err);
     return [];
